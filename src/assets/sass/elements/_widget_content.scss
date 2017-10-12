@@ -1,0 +1,42 @@
+div.widget_content{
+	background: #dc5f48;
+	padding: 50px 0 40px 0;
+	div.container{
+		div.row{
+			div.col-md-push-8{
+				img{
+					width:100%;
+				}
+			}
+			div.content{
+				padding: 0px !important;
+				div.widget-tags{
+				div.title-maps{
+					h2{
+						@include setFont(14px,#FFF,bold, $font-gothic);
+					}
+					&:after{
+						content:"";
+						display:block;
+						border-bottom: 1px solid #edb0a4;
+						width: 4%;
+						margin:10px 0;
+					}
+				}
+				ul.tags{
+					li{
+						display:inline-block;
+						a{
+							display: block;
+							padding: 15px;
+							background: #d53a1e;
+							@include setFont(14px,#FFF,0, $font-gothic);
+							margin-top:5px;
+						}
+					}
+				}
+				}
+			}
+		}
+	}
+}

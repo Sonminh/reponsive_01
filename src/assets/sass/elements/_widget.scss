@@ -1,0 +1,35 @@
+div.widget{
+	margin: 67px 0;
+	div.container{
+		div.button{
+
+			a{
+				display:inline-block;
+				width:100%;
+				border:1px solid #d53a1e;
+				text-align:center !important;
+				padding: 25px 0;
+				background:#fefbf9;
+				img{
+					float:left;
+				}
+				div{
+					display:inline-block;
+					div.text{
+						float:left;
+						padding-left:20px;
+						p{
+							@include setFont(16px,#1e1312,bold,$font-gothic);
+							margin: 0px;
+							text-align:left;
+						}
+						p.about{
+							@include setFont(12px,#d53a1e,700,$font-gothic);
+							margin: 10px 0 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

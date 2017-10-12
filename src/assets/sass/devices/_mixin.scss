@@ -1,0 +1,279 @@
+
+//============================= MOBILE =============================================
+//============================= HEADER =============================================
+@mixin setNavigationHeaderDevices(){
+	header{
+	height:80px;
+	div.header{
+		div.header-logo{
+			float:left;
+			width:20%;
+		}
+		nav.header-menu{
+			width:80%;
+			background: #FFFFFF;
+			float:left;
+			a.mobile-menu{
+				display:none;
+			}
+			ul.menu{
+				li{
+					a{
+						h1.gothic{
+							@include setFont(11px,#5b5b5b,bold, $font-gothic);
+						}
+						h1.mincho{
+							@include setFont(11px,#d84f3a,bold,$font-mincho);
+						}
+						height:80px;
+						width:95px;
+						i{
+							float:left;
+							@include setFont(12px,#FFF);
+							@include setBorderRadius(50%);
+							background: #433c30;
+							line-height:25px;
+							width:25px !important;
+							height:25px !important;
+							margin-left:20px !important;
+						}
+					}
+					&:nth-last-child{
+						border-right: 1px dashed #dddddd !important;
+					}
+				}
+			}
+		}
+	}
+}
+}
+//============================= ICON-MOBILE =============================================
+@mixin setIconMobile(){
+	div.header-logo{
+		img{
+				width:60%;
+				height: 60%;
+			}
+	}
+	nav.header-menu{
+		a.mobile-menu{
+			display:block !important;
+			position:fixed;
+			top:0px;
+			right: 10px;
+			// background:#d84f3a;
+			@include setFont(30px,#d84f3a !important);
+			z-index:2;
+		}
+		ul.menu{
+			display:none;
+			position:fixed;
+			top:40px;
+			right:0px;
+			z-index:11111;
+			li{
+				display:block;
+				width:100%;
+				border-bottom: 1px dashed #dddddd;
+				background: #d84f3a;
+				a{
+					h1.gothic{
+						@include setFont(14px,#fff !important,bold, $font-gothic);
+
+
+					}
+					h1.mincho{
+						@include setFont(14px,#fff !important,bold,$font-mincho);
+
+					}
+				}
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
+
+@mixin setHeaderMobile(){
+	header{
+	height:50px;
+	div.header{
+		div.header-logo{
+			img{
+				width:100% !important;
+			}
+		}
+		nav.header-menu{
+			width:80%;
+			background: #FFFFFF;
+			float:left;
+			a.mobile-menu{
+				display:none;
+			}
+			ul.menu{
+				li{
+					a{
+						h1.gothic{
+							@include setFont(11px,#5b5b5b,bold, $font-gothic);
+						}
+						h1.mincho{
+							@include setFont(11px,#d84f3a,bold,$font-mincho);
+						}
+						height:80px;
+						width:95px;
+						i{
+							float:left;
+							@include setFont(12px,#FFF);
+							@include setBorderRadius(50%);
+							background: #433c30;
+							line-height:25px;
+							width:25px !important;
+							height:25px !important;
+							margin-left:10px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+@mixin setFooterMobile(){
+	footer{
+		div.footer-top{
+			div.info-footer{
+				float:none;
+				width:100%;
+				img{
+					width:10%;
+				}
+				h2{
+					font-size:16px;
+					margin-bottom:10% !important;
+					width:80%;
+				}
+				p{
+					width:100%;
+				}
+			}
+			div.contact{
+				width:100%;
+				float:left;
+				h2{
+					margin-bottom:14px !important;
+				}
+				p{
+					span{
+						display:block;
+					}
+				}
+				p.email{
+					display:none;
+				}
+			}
+		}
+		div.footer-bottom{
+			padding:30px 0 40px 0;
+		}
+	}
+}
+//============================= ARTICLE =============================================
+@mixin setDistanceAcricle($padding , $margin){
+	div.article{
+		padding: $padding;
+		div.view-more{
+			margin: $margin;
+		}
+	}
+}
+//============================= WIDGET =============================================
+
+@mixin setDistanceWidget($margin-widget, $margin-button){
+	div.widget{
+		margin:  $margin-widget;
+		div.container{
+			div.button{
+				 margin-bottom: $margin-button;
+			}
+		}
+	}
+}
+
+//============================= CONTENT =============================================
+@mixin setDistanceWidgetContent($padding-widget-content, $margin-widget-tags){
+	div.widget_content{
+		padding: $padding-widget-content;
+		div.content{
+			padding: 0px !important;
+			div.widget-tags{
+				margin-top:$margin-widget-tags;
+			}
+		}
+	}
+}
+//============================= FOOTER =============================================
+@mixin setDistanceFooter($width-info-footer, $width-contact, $footer-bottom){
+	footer{
+			div.footer-top{
+				div.info-footer{
+					width:$width-info-footer;
+				}
+				div.contact{
+					width:$width-contact;
+				}
+			}
+			div.footer-bottom{
+				padding:$footer-bottom
+			}
+	}
+}
+//============================= BTN VIEW MORE =============================================
+@mixin setButtonViewMore(){
+	div.article{
+		div.view-more{
+			a{
+				display:block;
+			}
+		}
+	}
+}
+//============================= TITLE ACTICLE =============================================
+@mixin setTitleArticle(){
+	div.article{
+		div.container{
+			div.title{
+				text-align:center;
+				h2{
+					@include setFont(30px,#1e1312,700, $font-mincho);
+					display:block;
+				}
+				span{
+					@include setFont(20px,#1e1312,700, $font-gothic);
+					padding:0 !important;
+				}
+			}
+				div.time{
+					span.day{
+						margin:0 30% 0px 20px;
+					}
+				}
+		}
+	}
+
+}
+//============================= FLOAT-LEFT-FOOTER =============================================
+@mixin setFloatLeftFooter(){
+	footer{
+		div.footer-top{
+			div.info-footer{
+				width:60%;
+			}
+			div.contact{
+				float:left;
+				width:30%;
+			}
+		}
+	}
+}
+

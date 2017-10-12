@@ -1,0 +1,128 @@
+div.article{
+	padding: 70px 0px 0 0;
+	div.container{
+		div.title{
+			padding-bottom:38px;
+			text-align:center;
+			h2{
+				@include setFont(18px,#1e1312,700, $font-mincho);
+				display:inline;
+			}
+			span{
+				@include setFont(14px,#1e1312,700, $font-gothic);
+				padding-left:15px;
+			}
+			span.new{
+				padding-left:35px;
+			}
+			&:after{
+				content:"";
+				display:block;
+				border-bottom: 3px solid #d53a1e;
+				width: 5%;
+				margin: 0 auto;
+				padding-top:20px;
+			}
+		}
+		div.box{
+			margin-bottom:40px;
+			width:100%;
+			img.img-reponsive{
+				width:100%;
+			}
+			div.info{
+				background:#FFF;
+				padding:15px;
+				height: 169px;
+				h2.event{
+					@include setFont(14px,#506ea6,700, $font-mincho);
+				}
+				h2.blog{
+					@include setFont(14px,#f37520,bold);
+				}
+				h2.news{
+					@include setFont(14px,#61ad55,bold);
+				}
+				div.news{
+					margin: 5px 0;
+					a.new{
+						display:inline-block;
+						@include setFont(10px,#FFF,700, $font-gothic);
+						background: #d53a1e;
+						padding:5px 10px;
+						@include setBorderRadius(3px);
+					}
+					h3{
+						display:inline;
+						@include setFont(16px,#211f1f,700, $font-gothic);
+						margin:12px 0 20px 0 !important;
+					}
+				}
+				span{
+					@include setFont(14px,#211f1f,bold, $font-gothic);
+				}
+				div{
+					span{
+						float:left;
+					}
+				}
+				p{
+					@include setFont(14px,#211f1f,normal, $font-gothic);
+					display:inline;
+					>span
+					{
+						color:#e07c70;
+					}
+				}
+				div{
+					p.add{
+						float:left;
+						margin-left:20px;
+					}
+				}
+			}
+		}
+		div.time{
+			padding:15px 0px;
+			border-bottom:1px dashed #d3cfcb;
+			span.day{
+				@include setFont(12px,#464646,bold, $font-gothic);
+				margin:0 160px 0 20px;
+			}
+			i{
+				width:15px;
+				height:15px;
+				@include setFont(10px,#fff);
+				background: #aba2a2;
+				@include setBorderRadius(50%);
+				text-align:center;
+				line-height:15px;
+			}
+			span.number{
+				@include setFont(14px,#aba2a2,normal, $font-gothic);
+			}
+		}
+		div.subtitle{
+			padding: 10px;
+			height:45px;
+			div{
+				float:left;
+				@include setFont(11px,#959595,normal, $font-gothic);
+			}
+			img{
+				float:right;
+			}
+		}
+	}
+	div.view-more{
+		margin: 32px 0 80px 0;
+		a{
+			padding: 14px 65px;
+			background: #fefbf9;
+			border: 1px solid #d53a1e;
+			@include setFont(14px,#d53a1e,700, $font-mincho);
+			@include setBorderRadius(5px);
+		}
+	}
+}
+
